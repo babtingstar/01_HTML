@@ -56,3 +56,47 @@ h1 {
   color: white;
   font-size: 30px;
 }
+
+.hover-box {
+  border: 3px solid black;
+  width: 200px;
+  height: 200px;
+  background-color: #ddd;
+
+  /*cursor : pointer → 마우스 커서를 손가락 모양으로 변경*/
+  cursor: pointer;
+}
+
+.hover-box:hover {
+  /*
+  background-color : 배경 색상
+  background-image : 배경 이미지 지정
+                      : url("imagelink")
+  background-size : 배경 이미지 크기 지정
+                      : cover / 이미지를 확대하거나 크게 맞게 확대
+ */
+  background-image: url("../../01_HTML/cat.jpeg");
+  background-size: cover;
+}
+.호버-박스 {
+  border: 3px dotted orange;
+  width: 200px;
+  height: 200px;
+  background-color: yellowgreen;
+  cursor: pointer;
+}
+
+/*마우스를 호버-박스 위로 올렸을 때
+배경 이미지 flower1.jpg
+가운데 맞게 표시
+글자 가운데 정렬
+글자 크기 30px
+글자 색상 하얀색
+*/
+.호버-박스:hover {
+  background-image: url(../../01_HTML/flower1.jpg);
+  background-size: cover;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}

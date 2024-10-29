@@ -1,4 +1,4 @@
-div {
+.컨테이너 {
   width: 50%;
   text-align: center;
   border: 1px solid black;
@@ -14,11 +14,16 @@ input {
   border-radius: 5px;
   border: 1px solid #ddd;
 }
-button {
+.join-button {
   background-color: lightsalmon;
   border: none;
   padding: 16px;
   border-radius: 10px;
   font-size: 20px;
   cursor: pointer;
+}
+.join-button:hover {
+  background-color: crimson;
+  color: white;
+  transform: scale(1.08); /*버튼의 몸집을 키움*/
 }
