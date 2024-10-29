@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 선택자 1</title>
+    <style>
+      h1 {
+        color: orange; /*color : 글자 색상 변경*/
+      }
+      strong {
+        font-size: 18px; /*font-size : 글자 크기 변경, 기본은 16px*/
+        font-family: "궁서체";
+        /*font-family : 글꼴 변경, 1선택→2선택→n선택 글꼴 자동선택
+                        글꼴은 , 로 구분해서 작성
+                        종료는 ; 로 작성*/
+        color: steelblue;
+      }
+      code {
+        background-color: lightcoral; /*background-color : 배경색*/
+        display: block;
+        /* display : 배치 방식. 웹페이지에서 차지하는 공간과 위치 방식 결정
+           block : 항상 새 줄에서 시작, 가로 너비를 모두 사용
+                    width : 100% 처럼 등장
+                    가로폭이 화면 전체를 채움. 여러 개의 블록이 나란히 배치되지 않음
+                    태그 중에서 div, h1~h6, p 태그는 기본적으로 block으로 설정됨
+        */
+        font-weight: bold;
+        /* font-weight : 글자 두께 설정
+           bold : 두껍게
+        */
+      }
+      
+    </style>
+  </head>
+  <body>
+    <h1>CSS 선택자 1</h1>
+    <h3>태그 선택자</h3>
+    <pre>
+        - 현재 문서 내에 특정 태그를 모두 찾아 선택하는 선택자
+        <strong>[작성법]</strong>
+        <code>
+            태그명 {
+                css코드;
+            }
+        </code>
+    </pre>
+    <h3>id(#) 태그 선택자</h3>
+    <pre>
+        HTML 문서 내에서 id가 일치하는 요소를 선택하는 선택자
+        <strong>[작성법]</strong>
+        <code>
+            #id이름{
+                css코드;
+            }
+        </code>
+    </pre>
+
+    <!-- id를 활용해서 부분적으로 디자인 설정하기 -->
+    <style>
+    li {
+      background-color: yellowgreen;
+    }
+    #선택1번 {}
+    #선택2번 {background: orange;}
+    #선택3번 {background-color: lightblue;}
+    </style>
+    <ol>
+      <li id="선택1번">id 선택자 테스트 1</li>
+      <li id="선택2번">id 선택자 테스트 2</li>
+      <li id="선택3번">id 선택자 테스트 3</li>
+    </ol>
+    <hr />
+    <h3>class(.) 선택자</h3>
+    <pre>
+        - html 문서 내에서 class 속성 값이 일치하는 모든 요소를 선택하는 선택자
+        - style 에서는 class를 주로 사용
+        - id 값 주로 자바스크립트
+        - class를 디자인에서 필수로 사용하기(개발자 간의 약속)
+            <strong>[작성법]</strong>
+            <code>
+                .class이름명{
+                    class 코드;
+                }
+            </code>
+    </pre>
+    <style>
+      /*class(.) 선택자*/
+      .테스트1 {
+        background-color: black;
+        color: white;
+      }
+      .테스트2 {
+        background-color: pink;
+      }
+    </style>
+    <p class="테스트1">class 선택자 테스트1</p>
+    <p class="테스트2">class 선택자 테스트2</p>
+    <p class="테스트1">class 선택자 테스트3</p>
+    <p class="테스트2">class 선택자 테스트4</p>
+    <p class="테스트1">class 선택자 테스트5</p>
+    <p class="테스트2">class 선택자 테스트6</p>
+
+    <hr>
+    <hr>
+    <hr>
+    <style>
+        /*
+        ctrl
+        + x = 잘라내기
+        + f = 찾기
+        + z = 돌아가기
+        + shift + z = 돌아오기
+        */
+        /*
+        테스트 1로 종료되는 글자에 class이름 test-1을 주고
+        테스트 2로 종료되는 글자에 class이름 test-2를 준다
+        test-1의 배경색을 orange test-2의 글자 크기를 30px로 설정
+        */
+        .test-1 {
+            background-color: orange;
+        }
+        .test-2 {
+            font-size: 30px;
+        }
+    </style>
+        <li class="test-1">클래스 선택자 테스트1</li>
+        <li class="test-2">클래스 선택자 테스트2</li>
+    
+        <li class="test-1">클래스 선택자 테스트1</li>
+        <li class="test-2">클래스 선택자 테스트2</li>
+
+        <li class="test-1">클래스 선택자 테스트1</li>
+        <li class="test-2">클래스 선택자 테스트2</li>
+    </ul>
+  </body>
+</html>

@@ -1,9 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>CSS 개요</title>
+    <style>
+      /* css (범위) 주석 */
+      /* style 태그 : css를 작성하기 위한 태그 */
+      /* 태그 선택자 */
+      h1 {
+        color: red;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <h1>CSS(Cascading Style Sheets)</h1>
+    <pre>
+        Cascading = 작은 폭포
+        style = 작품의 구성이나 형식
+        sheets = 얇은 판
+        css의 태그를 <css></css> <sheets></sheets>등으로 작성하지 않는 이유
+        : css 이름의 경우 .html 처럼 확장자명으로 사용됨
+          스타일 태그들이 길어지는 경우 .css로 작성함
+          sheets의 경우 엑셀같이 다른 곳에서 표기명이 겹치기 때문에 <style></style> 사용
+        
+        - HTML 언어로 작성한 코드가 실제로 화면에 표시되는 방법을 기술하는 언어
+          ex: HTML / JavaScript / CSS
+          style 태그 안에 작성하는 디자인 css 언어
+          script 태그 안에 작성하는 기능 js
+
+        - css 확장파일로 따로 작성해 주지 않을 경우 head 태그 사이에 style 태그를 작성
+          body나 foot 태그에 작성해도 되지만, style 태그는 주로 head 태그 안에 작성
+    </pre>
+
+    <ul>
+      ** CSS 코드를 작성하는 방법 **
+      <li>
+        head 태그에 style 태그를 작성한 후에 내부에서 css 코드 작성
+        <br />
+        ex: head 태그 style 태그 h1 {color:red;}
+      </li>
+      <br />
+      <li>
+        원하는 요소에 직접 style 속성을 이용해서 css 코드 작성 ex: 직접 작성하는
+        방법 h4 style="color: blue;"
+      </li>
+      <li>
+        외부에 .css 파일을 생성해서 연결하는 방법
+        <br />
+        head 태그 안에
+        <link href="스타일.css" /> → .css로 작성한 스타일과 연결
+      </li>
+    </ul>
+  </body>
 </html>
