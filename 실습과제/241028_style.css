@@ -1,0 +1,24 @@
+div {
+  width: 50%;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 20px;
+}
+img {
+  width: 150px;
+  border-radius: 25px;
+}
+input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+button {
+  background-color: lightsalmon;
+  border: none;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
