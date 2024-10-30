@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 선택자 3</title>
+  </head>
+  <body>
+    <h1>css 선택자 3</h1>
+
+    <ul class="ul클래스" id="ul아이디">
+      <li class="li클래스" id="li아이디">선택자1</li>
+      <li class="li클래스" id="li아이디">선택자2</li>
+      <li class="li클래스" id="li아이디">선택자3</li>
+    </ul>
+
+    <!--
+    ul 태그 안의 li 태그를 디자인(style)을 적용하는 방법은 다양함
+    
+    1) ul li {css 스타일} : <ul> 안의 <li>에 css 스타일 적용
+    2) .li클래스 {css 스타일} : li클래스(class)에 css 스타일 적용
+    3) #li아이디 {css 스타일} : li아이디(id)에 css 스타일 적용
+    4) .ul클래스 li{css 스타일} : ul클래스(class) 안의 <li>에 css 스타일 적용
+    5) .ul클래스 .li클래스{css 스타일} : ul클래스(class) 안의 li클래스(class)에 css 스타일 적용
+    6) .ul클래스 #li아이디{css 스타일} : ul클래스(class) 안의 li아이디(id)에 css 스타일 적용
+    7) #ul아이디 li{css 스타일} : ul아이디(id) 안의 <li>에 css스타일 적용
+    8) #ul아이디 .li클래스{css 스타일} : ul아이디(id) 안의 li클래스(class)에 css스타일 적용
+    9) #ul아이디 #li아이디{css 스타일} : ul아이디(id) 안의 li아이디(id)에 css스타일 적용
+
+
+    A           B           {CSS스타일}
+    미기입      li
+    .ul클래스   .li클래스
+    #ul아이디   #li아이디
+    -->
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레이아웃 스타일 1</title>
+    <link rel="stylesheet" href="../css/05_레이아웃스타일1.css" />
+  </head>
+  <body>
+    <pre>
+        사전적 의미 : 배치, 정리
+        기술적 의미 : 구성요소를 제한된 공간에효율적으로 배치하는 것
+    </pre>
+    <h3>화면 배치(표시/형식) 지정 : display 속성</h3>
+    <pre>
+        요소가 화면에 어떻게 보여질지 형식을 지정하는 속성
+        - block : 화면을 수직 분할(행 분할/ 한 줄 차지)
+            width, height 지정 가능
+        - inline : 화면을 수평 분할(행 분할 / 글자, 문자열 생각)
+        - inline-block : inline의 수평 분할 + block의 width, height 지정 가능
+        - none : 요소는 존재하나 화면에는 표시하지 않음
+        - flex : 요소간의 간격 및 정렬을 유연하게 처리
+        - grid : 격자무늬 형식으로 화면을 분할
+    </pre>
+    <style>
+      .block {
+        border: 1px solid black;
+        width: 150px;
+        height: 150px;
+        color: white;
+        background-color: black;
+        /*
+        display: block;
+        div는 애초에 block 형태이기 때문에 변화 없음
+        */
+        display: inline;
+      }
+      /*
+        .block 영역1
+        class 옆에 띄어쓰기로 class 명을 추가 작성 가능, 개수 제한 없음
+        */
+      .영역1 {
+        background-color: white;
+        color: black;
+      }
+      /*class style 이 중복 선언될 경우 마지막 선언이 적용됨*/
+      .영역1 {
+        background-color: red;
+      }
+      .영역2 {
+        background-color: blue;
+      }
+      .영역3 {
+        background: green;
+      }
+      .영역4 {
+        background: yellow;
+      }
+    </style>
+    <h4>block 형식의 요소를 inline 형식으로 변경</h4>
+    <div class="block 영역1">1번영역</div>
+    <div class="block 영역2">2번영역</div>
+    <div class="block 영역3">3번영역</div>
+    <div class="block 영역4">4번영역</div>
+    <div class="block 영역5">5번영역</div>
+  </body>
+</html>
