@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transition 과 transform</title>
+  </head>
+  <body>
+    <h1>transition 과 transform</h1>
+    <h3>transition 속성</h3>
+    <pre>
+        transition : 요소의 속성이 변경될 때, 부드럽게 전환되도록 애니메이션 효과 추가
+                     class{transition:bgc}
+                     class:hover{bgc} 
+        transition: (속성명) (전환시간) (전환속도곡선) (전환시작전지연시간)
+        
+        transition : background-color 0.5s linear 3s
+        → 배경색 변경 속성을(background-color), 0.5초에 걸쳐(0.5s), 일정한 속도로(linear), 3초후에(3s) 
+    </pre>
+    <h3>transform 속성</h3>
+    <pre>
+        transform : 요소를 이동/회전/크기조절/뒤집기 등의 변환을 적용
+                    class{}
+                    class{transform:translate}
+            1. translate : x/y 축 이동
+                transform: translate(10px, 20px) : x축으로 10px, y축으로 20px 이동
+            2. rotate : 회전
+                transform: rotate(45deg) : 시계방향 45도 회전
+            3. scale : 크기조절
+                transform: scale(1.5) : 1.5배율
+            4. skew : 기울이기
+                transform: skew(10deg, 5deg) : 가로 오른쪽으로 10도, 세로 오른쪽으로 5도 기울이기
+            
+            transform: translate(20px, 10px) scale(1.2)
+                요소를 오른쪽으로 20px 이동, 아래로 10px 이동, 1.2 배율
+    </pre>
+    <br />
+    <br />
+    <h4>transition과 transform</h4>
+    <pre>
+        transition은 배경색 / 글자크기 / 글자색 / 크기 등
+        다양한 스타일 속성값에 속도 변화를 줄 수 있음
+
+        transform은 이동 / 기울이기 변경 가능
+
+        상대적으로 transition이 transform 보다 많이 사용
+    </pre>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: yellowgreen;
+        transition: background-color, transform 3s;
+        /*transition : background-color 3s;
+          transition : transform 3s;
+          두번 선언 한 것 과 같음
+        */
+      }
+      .box:hover {
+        background-color: aqua;
+        transform: rotate(45deg);
+      }
+    </style>
+    <div class="box"></div>
+  </body>
+</html>
