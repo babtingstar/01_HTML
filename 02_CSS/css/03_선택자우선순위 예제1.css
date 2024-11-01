@@ -1,0 +1,20 @@
+/* 3순위 : id 선택자 */
+#아이디속성 {
+  background-color: black;
+  font-size: 20px;
+}
+
+/* 4순위 : class 선택자 */
+.클래스속성 {
+  background-color: green;
+  color: white;
+}
+/* 5순위 : tag 선택자 */
+div {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  font-size: 100px !important; /* 1순위 : important */
+}
+/* important : 스타일이 의도한 바와 다르게 설정되는 것을 방지하기 위해 사용
+      */

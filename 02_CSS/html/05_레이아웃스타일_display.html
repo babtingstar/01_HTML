@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>속성</title>
+  </head>
+  <body>
+    <h1>Display 속성</h1>
+    <pre>
+        display 속성 HTML 요소의 배치 방식을 결정하는 중요한 css 속성
+        display의 주요 값
+            - block, inline, inline-block, flex, grid, inline-flex ...
+        
+        모든 태그에는 display가 각 속성에 맞게 기본 설정이 있음
+       
+        display:block ← div, h1~h6, p
+        ex) h1 태그의 기본 설정
+            display:block
+            font-weight:bold
+            font-size:32px
+            color:black
+        
+        display:inline ← span, a, strong
+        ex) span 태그의 기본 설정
+            display:inline
+            font-size:16px
+            color:black
+        
+        각 태그는 각 기본 스타일이 적용되어 있는데, 변경을 원할 경우 css를 이용해서 주는 것
+
+        display:inline-block ← img, button
+        - inline처럼 한 줄에 표시됨
+    </pre>
+    <h3>display : flex</h3>
+    <pre>
+        flex 요소는 내부 항목들이 수평 또는 수직으로 유연하게 정렬
+        
+        inline과 flex의 차이
+        inline - 가로 세로 조정 X
+        flex - 가로 세로 조정 O
+
+    </pre>
+
+    <div style="display: flex">
+      <div style="background-color: lightpink; padding: 20px">Flex Item 1</div>
+      <div style="background-color: lightblue; padding: 20px">Flex Item 2</div>
+      <div style="background-color: lightgreen; padding: 20px">Flex Item 3</div>
+    </div>
+
+    <h3>display:grid</h3>
+    <pre>
+        행과 열로 내부 항목을 정리
+        주로 이미지/웹툰처럼 틀과 형식으로 규칙적인 정렬이 필요할 때 사용
+
+        grid-template-columns: 2fr 1fr;
+        fr = fraction - 그리드 내에서 사용 가능한 공간을비율로 나누는 단위
+        1fr 1fr - 두개의 열이 동일하게 공간을 나눔
+        1fr 2fr - 1열은 그리드 내 가로 공간의 1/3, 2열은 그리드 내 가로 공간의 2/3
+
+        gap:10px
+        grid 셀 사이에 10px 간격을 추가
+        그리드 안에서 자동으로 10px 간격을 주고 자동 배치
+    </pre>
+    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 10px">
+      <div style="background-color: lightcoral; padding: 20px">Grid Item 1</div>
+      <div style="background-color: lightblue; padding: 20px">Grid Item 2</div>
+      <div style="background-color: lightgreen; padding: 20px">Grid Item 3</div>
+      <div style="background-color: yellow; padding: 20px">Grid Item 4</div>
+    </div>
+    <br />
+    <hr />
+    <br />
+
+    <!--
+    그리드를 활요해서 가로로 3개의 열을 만들기
+    배경색 : lightgreen lightblue lightpink
+    gap : 30px
+     -->
+
+    <div style="display: grid; grid-template-columns: 2fr 2fr 2fr; gap: 30px">
+      <div style="padding: 20px; background-color: lightgreen">gird test 1</div>
+      <div style="padding: 20px; background-color: lightblue">gird test 1</div>
+      <div style="padding: 20px; background-color: lightpink">gird test 1</div>
+    </div>
+  </body>
+</html>

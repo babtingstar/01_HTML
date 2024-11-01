@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 우선순위 확인하기</title>
+    <link rel="stylesheet" href="../css/03_선택자우선순위 예제1.css" />
+  </head>
+  <body>
+    <h1>CSS 우선순위 확인</h1>
+    <!-- 2순위 : 태그 내 직접 style 작성 -->
+    <div class="클래스속성" id="아이디속성" style="background-color: lightblue">
+      우선 순위 테스트
+    </div>
+    <!--
+    속성에서 bgc만 class, id, tag에서 배경색 설정을 동시에 사용
+    동시에 사용하는 속성이 아니라면 모두 누적
+    -->
+  </body>
+</html>

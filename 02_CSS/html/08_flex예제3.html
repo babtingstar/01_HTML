@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>justify-content 활용해서 이미지 정렬</title>
+    <style>
+      /*
+        .이미지클래스명
+        {
+            .div-img 활용
+            가로 100px
+            세로 100px
+        }
+        */
+      .div-img {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+        border: 2px solid #333;
+        transition: visibility 0.3s;
+      }
+      .div-img:hover {
+        /* display: none;*/
+        visibility: hidden;
+      }
+      /*
+      container
+      flex
+      가로 90%
+      마진 상하 20px 자동
+      실선 1px #ccc
+      패딩 상하좌우 10px
+      */
+      .container {
+        display: flex;
+        width: 90%;
+        margin: 20px auto;
+        border: 20px solid #ccc;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>justify-content를 이용해서 이미지 정렬</h1>
+    <div class="container" style="justify-content: space-between">
+      <!--flower2 3 4-->
+      <img src="../img/flower2.jpg" alt="" class="div-img" />
+      <img src="../img/flower3.jpg" alt="" class="div-img" />
+      <img src="../img/flower4.jpg" alt="" class="div-img" />
+    </div>
+    <div class="container" style="justify-content: space-around">
+      <!--pumpkin skull web-->
+      <img src="../img/pumpkin.jpg" alt="" class="div-img" />
+      <img src="../img/skull.jpg" alt="" class="div-img" />
+      <img src="../img/web.jpg" alt="" class="div-img" />
+    </div>
+    <div class="container" style="justify-content: space-evenly">
+      <!--flower1 ghost flower5-->
+      <img src="../img/flower1.jpg" alt="" class="div-img" />
+      <img src="../img/ghost.jpg" alt="" class="div-img" />
+      <img src="../img/flower5.jpg" alt="" class="div-img" />
+    </div>
+  </body>
+</html>
