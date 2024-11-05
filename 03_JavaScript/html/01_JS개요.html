@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript 개요</title>
+  </head>
+  <body>
+    <h1>Script 언어란?</h1>
+    <pre>
+        기본 프로그램의 동작을 사용자의 요구에 맞게 수행되도록 해주는 용도의 언어
+
+        별도의 소스코드 컴파일(이진수로 번역)을 하지 않고
+        Interpreter(인터프리터, 한 줄 씩 코드를 읽어서 해석하는 기계)를 이요해서 코드를 바로 실행
+
+        - 장점 : 컴파일에 소요되는 시간이 없음
+        - 단점 : 프로그램 실행 시간이 상대적으로 느림
+
+        * 프로그래밍 언어로 작성한 코드를 컴퓨터가 이해할 수 있는 형태로 변환해주는 프로그램
+        컴파일러(compiler) : 코드 모음, 코드 수집
+                            사람이 사용하는 언어로 코딩을 진행한 소스 코드를
+                            한 번에 컴퓨터가 알아들을 수 있는 언어로 변환하고
+                            변환이 완료된 파일을 생성하여 파일을 실행
+                            사람이만든파일.java → 사람이만든파일.class
+                            실행할 때는 사람이만든파일.class 파일이 실행이 되기 빠름
+                            ex) C, C++, Java
+        인터프리터(Interpreter) : 인터프리터는 소스 코드를 한 줄 씩 해석하면서 바로 실행
+                                 코드를 작성한 다믕 바로 실행 가능
+                                 한 줄씩 해석하면서 실행하기 때문에 컴파일러 방식에 비해 속도가 느림
+                                 ex) Python, JavaScript, Ruby
+    </pre>
+    <hr />
+    <h1>JavaSCript란?</h1>
+    <pre>
+      웹 브라우저(크롬, 엣지, 웨일, 파이어폭스 등)에서 주로 사용하는
+      인터프리터 방식의 객체 지향 프로그래밍 언어
+
+      ECMA Script 표준을 따르는 대표적인 웹 기술
+      (JS 버전 이름 : ES5, ES6, ES7, ...)
+    </pre>
+    <hr />
+    <h1>JavaScript 코드 작성 방법</h1>
+    <ol>
+      <li>
+        브라우저 개발자 도구 → console에 직접 작성 HTML 내부에 Script 태그를
+        이용해서 작성 &lt;script&gt; 태그를 이용해서 작성한다는 의미
+      </li>
+      <li>
+        HTML 외부에 존재하는 .js 파일을 연결해서 사용하는 방법 .css와 비슷하게
+        사용 .css와 다르게, &lt;script src="파일명.js"&gt; 파일을 불러옴
+      </li>
+      <li>
+        태그에 직접 JS 코드를 작성하는 방식(권장 x)
+        <h6 style="color: red">CSS 스타일 직접 꾸미기 방식</h6>
+        <button onclick="alert('버튼 클릭되었습니다.')">
+          JS 기능 직접 적용하는 방식
+        </button>
+      </li>
+    </ol>
+  </body>
+</html>
