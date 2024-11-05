@@ -28,7 +28,7 @@ function 더하기() {
 }
 
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@이거왜안됨@@@@@@@@@@@@@@@@@@@@@@@@@@@
-function 뺴기() {
+function 빼기() {
   const value1 = 숫자1.value;
   const value2 = 숫자2.value;
   결과.innerText = Number(value1) - Number(value2);
@@ -40,7 +40,7 @@ function 빼기() {
   숫자2.value;
   결과.innerText = Number(숫자1.value) - Number(숫자2.value);
 }
-
+*/
 function 곱하기() {
   숫자1.value;
   숫자2.value;
@@ -57,4 +57,3 @@ function 나머지() {
   숫자2.value;
   결과.innerText = Number(숫자1.value) % Number(숫자2.value);
 }
-*/
