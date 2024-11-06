@@ -15,18 +15,18 @@ let count = 0;
 
 function minus() {
   const vl = Number(input.value);
-  count -= input;
+  count -= vl;
   result.innerText = count;
 }
 
 function plus() {
   const vl = Number(input.value);
-  count += input;
+  count += vl;
   result.innerText = count;
 }
 
 function mul() {
   const vl = Number(input.value);
-  count *= input;
+  count *= vl;
   result.innerText = count;
 }
