@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>조건문</title>
+  </head>
+  <body>
+    <h1>조건문 (Condition)</h1>
+    <pre>
+        condition : 조건에 따라 다르게 동작
+                    조건 = true 일때 작업을 수행
+        
+        프로그래밍 코드가 해석되는 순서를 제어하는 제어문의 한 종류로
+        작성된 조건식에 따라서 수행되는 코드를 변경하는 구문
+    </pre>
+    <h3>if 문</h3>
+    <pre>
+        <code>
+            if(조건식)
+            {조건식=true 일 때 실행할 코드;}
+        </code>
+    
+        * 조건식 : 결과가 true, false 인 식
+        * 조건문 : 조건식의 결과에 따라 실행을 제어하는 구문 (if, switch)
+    </pre>
+    <h4>입력받은 수가 양수인지 아닌지 검사</h4>
+    <input type="number" id="input1" />
+    <button onclick="check1()">양수인지 검사</button>
+    <hr />
+    <h3>if - else 문</h3>
+    <pre>
+        <code>
+            if(조건식)
+            {조건식=true 일 때 실행할 코드;}
+            else
+            {조건식=false 일 때 실행할 코드;}
+        </code>
+            if-else   VS   삼항연산자
+            if-else : 수행해야 하는 구문이 많을 때 사용
+            삼항연산자 : 수행해야 하는 구문이 적을 때 사용
+            
+            else(){} ----- X
+            else{} ----- O
+    </pre>
+
+    <script src="../js/06_조건문.js"></script>
+    <h3>if - else_if - else</h3>
+    <pre>
+      <code>
+        if(조건식A)
+        {A = true 일 때 실행;}
+        else if(조건식 B)
+        {A = false 이고, B = true 일 때 실행;}
+        else
+        {A = false 이고, B = false 일 때 실행;}
+      </code>
+
+      else if는
+      무조건 if{} - else{} 사이에 작성
+      if{} - else{} 사이에 작성 횟수 제한 x
+    </pre>
+  </body>
+</html>

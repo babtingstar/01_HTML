@@ -52,6 +52,57 @@
       <!--경고메세지 보이기 숨기기-->
       <p id="msg">전화번호나 휴대폰 번호를 입력해주세요.</p>
     </div>
+
+    <hr />
+    <h3>논리 부정(NOT) 연산자(!)</h3>
+    <pre>
+      - 논리값을 반대로 바꾸는 연산자
+
+      ex)
+      const 사과 = "apple"
+
+      사과 != "apple" ? A : B
+      return B;
+    </pre>
+    <hr />
+    <h3>부등호 (=, ==, ===)</h3>
+    <pre>
+      = : 할당 연산자
+          - 변수에 값(num text)를 할당할 때 사용
+            ex) const a = 5; let 사과 = "red"
+
+      == : 동등 연산자
+           - 값만 비교하는 연산자
+           - 타입이 다르더라도 값이 같음녀 true 반환
+             ex) const 숫자5 = 5;
+                 const 글자5 = "5";
+                 
+                 숫자5 == 글자5 ? true : false
+                 return true
+                 
+                 값을 우선적으로 보기 때문에 값만 같으면 됨
+      === : 일치 연산자
+            - 값과 타입이 모두 일치하는지 비교
+            - 값고 타입이 모두 같아야 return true
+              ex) const 숫자5 = 5;
+                   const 글자5 = "5";
+                   
+                   숫자5 == 글자5 ? true : false
+                   return false
+    
+      === : 일치 연산자
+            - 값과 타입이 모두 일치하는지 비교
+            - 값고 타입이 모두 같아야 return true
+              ex) const 숫자5 = 5;
+                   const 글자5 = "5";
+                   
+                   숫자5 == 글자5 ? true : false
+                   return false
+    
+      == : 자동으로 타입 변환함
+      === : 타입 변환 X
+    </pre>
+
     <script src="../js/03_연산자3_논리.js"></script>
   </body>
 </html>

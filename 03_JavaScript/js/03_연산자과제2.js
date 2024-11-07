@@ -4,13 +4,28 @@ const inputMP = document.getElementById("inputMP");
 const inputTP = document.getElementById("inputTP");
 const loginId = document.getElementById("loginId");
 const loginPw = document.getElementById("loginPw");
+let userId = null;
+let userPw = null;
+
+function signup() {
+  const MP = inputMP.value;
+  const TP = inputTP.value;
+
+  /*userId = inputId.value;
+  userPw = inputPw.value;*/
+
+  const MSG = document.getElementById("msg");
+  MP || TP
+    ? ((userId = inputId.value),
+      (userPw = inputPw.value),
+      (MSG.style.display = "none"))
+    : (MSG.style.display = "block");
+}
 
 function login() {
-  const pw = inputPw.value;
-  const pwConfirm = inputPwConfirm.value;
-  const pwData = "pass1234!";
-
-  pw == pwData && pwConfirm == pwData
-    ? alert("일치합니다.")
-    : alert("일치하지 않습니다.");
+  const logId = loginId.value;
+  const logPw = loginPw.value;
+  logId == userId && logPw == userPw
+    ? alert("로그인 성공")
+    : alert("로그인 실패");
 }
