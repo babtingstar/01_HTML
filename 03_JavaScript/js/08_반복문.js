@@ -35,3 +35,52 @@ function check4() {
   }
   alert(d_result);
 }
+
+function while1() {
+  let a = 0;
+  while (a <= 5) {
+    alert(a);
+    a++;
+  }
+}
+
+function while2() {
+  let abc = 0;
+  let result = 0;
+  while (abc <= 10) {
+    abc++;
+    console.log(abc);
+    result += abc;
+  }
+}
+
+function while3() {
+  let abc = 0;
+  let result = 0;
+  while (1 <= 10) {
+    abc++;
+    console.log(abc);
+    result += abc;
+    if (abc == 5) {
+      break;
+    }
+  }
+}
+
+function while4() {
+  let xyz = 0;
+  while (xyz <= 20) {
+    xyz++;
+    console.log(xyz);
+  }
+}
+
+function while5() {
+  let a = 5;
+  while (a >= 20) {
+    console.log(a);
+    if (a == 15) {
+      break;
+    }
+  }
+}

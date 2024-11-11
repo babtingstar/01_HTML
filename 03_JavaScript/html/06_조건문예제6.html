@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입출금사이트</title>
+    <style>
+      .account {
+        width: 500px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .row {
+        margin-bottom: 20px;
+      }
+      h1 {
+        font-size: 30px;
+      }
+      input {
+        border: 1px solid #ddd;
+        font-size: 20px;
+        border-radius: 10px;
+        padding: 15px;
+      }
+      button {
+        padding: 10px 20px;
+        border: none;
+        font-size: 25px;
+      }
+      .입금btn:hover {
+        background-color: yellowgreen;
+        color: white;
+      }
+      .출금btn:hover {
+        background-color: orangered;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="account">
+      <div class="row">
+        <h1>잔액 : <span id="output"></span>원</h1>
+      </div>
+      <div class="row">
+        <label for="amount">금액</label>
+        <input type="text" id="amount" />
+        <span>원</span>
+      </div>
+      <div class="row">
+        <button class="출금btn" onclick="출금기능()">출금</button>
+        <button class="입금btn" onclick="입금기능()">입금</button>
+      </div>
+    </div>
+    <script>
+      const output = document.getElementById("output"); // 잔액 id 가져오기
+      const amount = document.getElementById("amount"); // 작성금액 id 가져오기
+      let balance = 10000; // 잔고는 변화하기 때문에 가변 변수인 let, 초기값으로 10000
+      output.innerText = balance;
+      function 출금기능() {
+        if (amount.value) {
+          if (amount.value <= balance) {
+            balance -= Number(amount.value); // 잔고에 작성된 금액 빼기
+            output.innerText = balance; // 변경된 잔고를 잔고 표기에 다시 표기함
+            amount.value = ""; // 입력 후 금액 작성 칸 비워주기
+          } else {
+            alert("잔액이 부족하여 출금할 수 없습니다.");
+            amount.value = "";
+          }
+        } else {
+          alert();
+        }
+      }
+      function 입금기능() {
+        if (amount.value) {
+          balance += Number(amount.value); // 잔고에 작성된 금액 더하기
+          output.innerText = balance; // 변경된 잔고를 잔고 표기에 다시 표기함
+          amount.value = ""; // 입력 후 금액 작성 칸 비워주기
+        } else {
+          alert();
+        }
+      }
+    </script>
+  </body>
+</html>
