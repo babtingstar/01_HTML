@@ -60,5 +60,63 @@
       무조건 if{} - else{} 사이에 작성
       if{} - else{} 사이에 작성 횟수 제한 x
     </pre>
+
+    <h1>switch 문</h1>
+    <h3>switch, case, default 문</h3>
+    <pre>
+      switch 문
+      - 식 하나의 결과로 많은경우의 수를 처리할 때 사용하는 조건문
+
+      <code>
+        switch(식){ // 식의 결과는 정수 or 문자열
+          case 결과1 :
+          결과1 일때 수행할 코드;
+          break; 결과1 일때 정지
+
+          case 결과2 :
+          결과2 일때 수행할 코드;
+          break; 결과2 일때 정지
+          
+          case 결과3 :
+          결과3 일때 수행할 코드;
+          break; 결과3 일때 정지
+          ...
+
+          default :
+          위 모든 case가 false 일때 수행하는 코드
+        }
+      </code>
+    </pre>
+    <h2>조건이 여러개인 switch 문</h2>
+    <pre>
+    if 문 처럼 조건이 여러 경우 일 때는
+    
+    case 조건1 : case 조건2 : case 조건 3:
+    조건1이나 조건2나 조건3 일 때 부합할 경우 실행할 코드
+    
+    case 조건4 : case 조건5
+    조건4나 조건5일때 부합할 경우 실행할 코드
+    
+    default :
+    조건1~조건5까지 모두 부합하지 않을 경우 싫행할 코드
+    <code>
+      switch(식){ // 식의 결과는 정수 or 문자열
+        case 조건1 : case 조건2 : case 조건 3:
+        조건1이나 조건2나 조건3 일 때 부합할 경우 실행할 코드
+        
+        case 조건4 : case 조건5
+        조건4나 조건5일때 부합할 경우 실행할 코드
+    
+        default :
+        위 모든 case가 false 일때 수행하는 코드
+      }
+    </code>
+</pre>
+    <pre>
+    case 조건1: case 조건2: case 조건3:
+    if(조건1 || 조건2 || 조건3)
+    {셋 중 하나라도 true일 경우 실행할 코드}
+</pre
+    >
   </body>
 </html>
