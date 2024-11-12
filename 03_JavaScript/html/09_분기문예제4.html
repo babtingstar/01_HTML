@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>분기문 파라미터 매개변수 활용하기</title>
+    <style>
+      button {
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        padding: 10px 20px;
+      }
+      button:hover {
+        background-color: lightyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>버튼을 활용한 과일 주문하기</h1>
+    <div>
+      <button onclick="선택('apple')">사과(&#8361; 2,000원)</button>
+      <button onclick="선택('grape')">포도(&#8361; 5,000원)</button>
+      <button onclick="선택('kiwi')">키위(&#8361; 3,000원)</button>
+      <h2 id="price"></h2>
+    </div>
+    <script>
+      let totalPrice = 0;
+
+      function 선택(abc) {
+        // 어떤 값이 들어올지 몰라서 let 변수명만 작성. let A; 는 길어서 A 만 작성
+        const price = document.getElementById("price");
+        switch (
+          abc // functionname() switich() 에는 동일한 변수 기입
+        ) {
+          case "apple":
+            totalPrice += 2000;
+            break;
+          case "grape":
+            totalPrice += 5000;
+            break;
+          case "kiwi":
+            totalPrice += 3000;
+            break;
+          // button 으로 클릭할 경우에는 예외처리를 할 필요가 없으므로 default : 를 작성하지 않아도 됨
+        }
+        price.innerText = totalPrice;
+      }
+    </script>
+  </body>
+</html>

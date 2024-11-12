@@ -2,7 +2,7 @@
 // const 값을 넣지 않고 선언 불가능(상수)
 
 function selectSeason() {
-  let season;
+  let season = 0;
   const result = document.getElementById("result");
   const bd = document.getElementById("bd");
 
