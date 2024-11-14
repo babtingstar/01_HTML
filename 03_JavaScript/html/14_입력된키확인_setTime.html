@@ -23,6 +23,25 @@
         */
       const keys = document.querySelectorAll(".key");
       let idx;
+
+      /*
+      아래 코드에서는 키보드 이벤트 객체에서
+      사용자가 키를 눌렀을 때 누른키의 값을개발자코드에 전달
+      키보드 이벤트는 keydown keyup keypress 와 같은이벤트가 발생할 때마다
+      이벤트 객체를 생성하고, 객체에는키와 관련된 정보가 들어옴
+      event.key = 소비자가누른 키의 글자를 개발자 코드에 전달
+                  ex) shift 라는 킬ㄹ 누르면 "shift"라는 문자열반환
+                  소비자가 키보드에서 누른 값 = key
+
+      
+      event = 키보드에 어떤 행위를 하는 것
+
+      배열이나 다른 코드에서는 key value 한 쌍
+      ["이메일" : "aaa@abc.xyz"]
+          key          value
+
+      event.key는 value가 없고 event.key 자체가 직접 값을 차단
+      */
       function keyInputDown(event) {
         switch (event.key.toLowerCase()) {
           case "a":
