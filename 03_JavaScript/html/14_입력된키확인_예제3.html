@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q W E R로 입력된 키 확인하기</title>
+    <link rel="stylesheet" href="../css/14_입력된키확인_예제3.css" />
+  </head>
+  <body onkeyup="keyUp(event)" onkeydown="keyDown(event)">
+    <div class="container">
+      <div class="key-box">
+        <div class="key">Q</div>
+        <div class="key">W</div>
+        <div class="key">E</div>
+        <div class="key">R</div>
+      </div>
+    </div>
+
+    <script>
+      /*Q W E R 입력될 때마다 입력된 알파벳 배경색 변경
+        body 태그 내에 작성된 모든 태그의 키를 바라보겠다 표기
+
+        onclick~ 같은 이벤트는 button/input 태그에서만 사용할 수 있는게 아니라
+        상황에 따라 각 태그에 작성할 수 있음
+        */
+
+      /*
+       document.querySelector(".key");
+           첫 번째로 작성된 .key 요소만 선택
+       document.querySelectorAll(".key");
+           모든 클래스 이름으로 key가 작성된 .key 요소 모두 선택
+       */
+      const keys = document.querySelectorAll(".key");
+
+      function keyUp(event) {
+        let idx;
+        //toLowerCase()
+        //입력된 키가 대문자로 입력이 되었을 때,
+        //입력된 키를 소문자로 바꿔서 일치하는 케이스를 실행
+        switch (event.key.toLowerCase()) {
+          case "q":
+            //case "Q":
+            idx = 0;
+            break;
+          case "w":
+            //case "W":
+            idx = 1;
+            break;
+          case "e":
+            //case "E":
+            idx = 2;
+            break;
+          case "r":
+            //case "R":
+            idx = 3;
+            break;
+          default:
+            return;
+        }
+        keys[idx].style.backgroundColor = "yellowgreen";
+
+        //일정 시간 후 다시 흰색으로 변경하는 스크립트를 세팅
+        /*
+        구버전 setTimeout
+            - setTimeout(function, msec, param);
+            - 일정 시간이 종료되면, 특정 기능을 수행
+            - 가능이 진행될때 몇 초 후에 기능이 진행될 지 설정
+            - param은 필수입력x
+
+        신버전 setTimeout
+            - setTimeout(function, msec)
+                ex) setTimeout( () => {설정하고자 하는 기능 코드}, 지연시간)
+        */
+        //구버전 - setTimeout(색상되돌리기, 200, idx);
+        setTimeout(() => {
+          keys[idx].style.backgroundColor = "white";
+        }, 200);
+      }
+
+      function 색상되돌리기(idx) {
+        keys[idx].style.backgroundColor = "white";
+      }
+
+      /*
+      function keyDown(event) {
+        let idx;
+        switch (event.key.toLowerCase()) {
+          case "q":
+            //case "Q":
+            idx = 0;
+            break;
+          case "w":
+            //case "W":
+            idx = 1;
+            break;
+          case "e":
+            //case "E":
+            idx = 2;
+            break;
+          case "r":
+            //case "R":
+            idx = 3;
+            break;
+          default:
+            return;
+        }
+        keys[idx].style.backgroundColor = "white";
+      }
+        */
+    </script>
+  </body>
+</html>

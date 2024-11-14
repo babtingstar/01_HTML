@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력된 키 확인</title>
+    <link rel="stylesheet" href="../css/14_입력된키확인_예제3.css" />
+  </head>
+  <body onkeydown="keyInputDown(event)" onkeyup="keyInputUp(event)">
+    <div class="container">
+      <div class="key-box">
+        <div class="key">A</div>
+        <div class="key">B</div>
+        <div class="key">C</div>
+        <div class="key">D</div>
+        <div class="key">E</div>
+      </div>
+    </div>
+    <script>
+      /*
+        .toLowerCase() : 문자열을 소문자로 변경
+        .toUpperCase() : 문자열을 대문자로 변경
+        */
+      const keys = document.querySelectorAll(".key");
+      let idx;
+      function keyInputDown(event) {
+        switch (event.key.toLowerCase()) {
+          case "a":
+            idx = 0;
+            break;
+          case "b":
+            idx = 1;
+            break;
+          case "c":
+            idx = 2;
+            break;
+          case "d":
+            idx = 3;
+            break;
+          case "e":
+            idx = 4;
+            break;
+          default:
+            return;
+        }
+        keys[idx].style.backgroundColor = "#2a9d8f";
+        keys[idx].style.color = "white";
+      }
+      function keyInputUp(event) {
+        switch (event.key.toLowerCase()) {
+          case "a":
+            idx = 0;
+            break;
+          case "b":
+            idx = 1;
+            break;
+          case "c":
+            idx = 2;
+            break;
+          case "d":
+            idx = 3;
+            break;
+          case "e":
+            idx = 4;
+            break;
+          default:
+            return;
+        }
+        //keys[idx].style.backgroundColor = "white";
+        //keys[idx].style.color = "#333";
+
+        setTimeout(() => {
+          keys[idx].style.backgroundColor = "white";
+          keys[idx].style.color = "black";
+        }, 3000);
+      }
+    </script>
+  </body>
+</html>
