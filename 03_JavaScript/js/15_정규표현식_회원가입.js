@@ -14,39 +14,31 @@ function signUp() {
   const pwRegex = /^[a-zA-Z0-9!@#$%^&*]{8,20}$/;
   const nameRegex = /^[가-힇]{2,15}$/;
 
-  let alertText = "";
-
   if (idRegex.test(inputId)) {
-    alertText += inputId + "\n";
+    hintMsg_Id.innerText = "양식에 맞게 입력하였습니다.";
     hintMsg_Id.className = "success-msg";
   } else {
-    alertText += "아이디 형식 오류" + "\n";
     hintMsg_Id.className = "error-msg";
   }
 
   if (pwRegex.test(inputPw)) {
-    alertText += inputPw + "\n";
+    hintMsg_Pw.innerText = "양식에 맞게 입력하였습니다.";
+    hintMsg_Pw.className = "success-msg";
   } else {
-    alertText += "비밀번호 형식 오류" + "\n";
+    hintMsg_Pw.className = "error-msg";
   }
 
-  if (inputPw == inputPwCheck.trim) {
-    alertText += inputPwCheck + "\n";
+  if (inputPw.trim === inputPwCheck.trim) {
+    hintMsg_PwCheck.innerText = "비밀번호와 일치합니다";
+    hintMsg_PwCheck.className = "success-msg";
   } else {
-    alertText += "비밀번호 확인 오류" + "\n";
+    hintMsg_PwCheck.className = "error-msg";
   }
 
   if (nameRegex.test(inputName)) {
-    alertText += inputName + "\n";
+    hintMsg_Name.innerText = "양식에 맞게 입력하였습니다.";
+    hintMsg_Name.className = "success-msg";
   } else {
-    alertText += "이름 형식 오류" + "\n";
-  }
-
-  if (gender == "남") {
-    alertText += gender + "\n";
-  } else if (gender == "여") {
-    alertText += gender + "\n";
-  } else {
-    alertText += "성별 오류";
+    hintMsg_Name.className = "error-msg";
   }
 }

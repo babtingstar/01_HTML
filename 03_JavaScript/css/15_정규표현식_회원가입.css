@@ -52,5 +52,5 @@ button {
   cursor: pointer;
 }
 p {
-  display: none;
+  font-size: 0;
 }
