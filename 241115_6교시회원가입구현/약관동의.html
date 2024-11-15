@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>약관동의</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>행복나라 사이트</h1>
+      <p>행복나라에 오신 것을 환영합니다.</p>
+    </header>
+    <nav>
+      <a href="메인.html">메인페이지</a>
+      <a href="약관동의.html">회원가입</a>
+    </nav>
+    <h2>약관 동의</h2>
+    <form action="">
+      <label for="checkbox1"
+        ><input type="checkbox" id="checkbox1" name="checkbox1" /> (필수)
+        이용정보 약관 동의
+      </label>
+      <br />
+      <label for="checkbox2"
+        ><input type="checkbox" id="checkbox2" name="checkbox2" /> (필수)
+        개인정보 수집 및 이용동의
+      </label>
+      <br />
+      <label for="checkbox3"
+        ><input type="checkbox" id="checkbox3" name="checkbox3" /> (필수) 마케팅
+        정보 수신 동의
+      </label>
+      <br />
+      <!--
+      form 태그 내부에서 type을 button / submit 으로 주었을 때 차이
+      
+      submit : form 태그 옆에 action 속성으로 이동하는 규칙
+                <form> <button type="submit"> btnName </button></form>
+                form 태그 속성에 action으로 이동하는 공간을 작성하지 않으면 현재페이지에서 새로고침만 될 것
+      button : 기본적으로 form을 제출하지 않기 때문에
+                단순히 자바스크립트에서 작성한 코드만 실행함
+      -->
+      <button type="button" onclick="AgreePage_signUp()">
+        동의하고 회원가입
+      </button>
+    </form>
+    <script src="회원가입구현.js"></script>
+  </body>
+</html>
