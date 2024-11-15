@@ -12,13 +12,19 @@
       <!--
       약관 동의를 활용해서 모든 약관을 동의했을 경우 회원가입 버튼 활성화
       -->
-      <label for=""><input type="checkbox" id="약관" />약관1</label>
-      <br />
-      <label for=""><input type="checkbox" id="약관" />약관2</label>
-      <br />
-      <label for=""><input type="checkbox" id="약관" />약관3</label>
-      <br />
-      <button disabled>회원가입</button>
+      <label for="">
+        <input type="checkbox" id="동의1" onclick="동의버튼()" /> 필수약관 1
+        동의
+      </label>
+      <label for="">
+        <input type="checkbox" id="동의2" onclick="동의버튼()" /> 필수약관 2
+        동의
+      </label>
+      <label for="">
+        <input type="checkbox" id="동의3" onclick="동의버튼()" /> 필수약관 3
+        동의
+      </label>
+      <button id="signBtn" disabled>회원가입</button>
     </div>
     <script src="../js/16_기본이벤트예제1.js"></script>
   </body>
